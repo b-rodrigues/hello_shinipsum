@@ -11,6 +11,7 @@ shinyServer(function(input, output) {
   #     re-executed when inputs change
   #  2) Its output type is a plot
 
-  output$distPlot <- random_ggplot()
-
+  output$distPlot <- renderPlot({
+    random_ggplot(type = "density")
+  })
 })
