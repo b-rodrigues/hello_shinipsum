@@ -11,7 +11,7 @@ shinyServer(function(input, output) {
   #     re-executed when inputs change
   #  2) Its output type is a plot
 
-  output$distPlot <- renderPlot({
-    random_ggplot(type = "density")
+  output$table <- renderDT({
+    mtcars 
   })
 })
